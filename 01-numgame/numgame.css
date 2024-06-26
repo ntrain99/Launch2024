@@ -1,0 +1,15 @@
+body {
+    background-color: rgb(99, 46, 10);
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color:aliceblue;
+    font-size:25px ;
+}
+
+#guess {
+    background-color:rgba(95, 158, 160, 0.473);
+    font-family:monospace;
+}
+
+#maxmin {
+    font-size: 20px;
+}

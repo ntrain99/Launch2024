@@ -1,0 +1,17 @@
+body {
+    background-color: rgb(157, 209, 34);
+}
+
+.myclass {
+    background-color: rgba(56, 148, 148, 0.678);
+}
+
+#mytext {
+    font-family:'Times New Roman', Times, serif;
+}
+
+p {
+    font-size: 100px;
+    color:aliceblue;
+    border:beige;
+}

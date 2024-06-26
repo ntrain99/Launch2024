@@ -2,12 +2,14 @@ const guess = document.getElementById("guess");
 const report = document.getElementById("report");
 
 document.getElementById("reset").style.visibility = "hidden";
+document.getElementById("yourGuess").style.visibility = "hidden";
+document.getElementById("guess").style.visibility = "hidden";
+document.getElementById("report").style.visibility = "hidden";
+document.getElementById("makeGuess").style.visibility = "hidden";
+document.getElementById("startGame").style.visibility = "hidden";
 
-const max = document.getElementById("maximum");
-const min = document.getElementById("minimum");
-
-let MAXNUM = max.value
-let MINNUM = min.value
+let MAXNUM;
+let MINNUM;
 
 let secret;
 
@@ -16,11 +18,41 @@ var myConfetti = confetti.create(null, {
     useWorker: true
 });
 
+function  easy() {
+    MINNUM = 1;
+    MAXNUM = 5;
+    document.getElementById("difficulty1").style.backgroundColor = "gray";
+    document.getElementById("difficulty1").style.color = "white";
+    document.getElementById("startGame").style.visibility = "visible";
+    
+}
+function  medium() {
+    MINNUM = 1;
+    MAXNUM = 50;
+    document.getElementById("difficulty2").style.backgroundColor = "gray";
+    document.getElementById("difficulty2").style.color = "white";
+    document.getElementById("startGame").style.visibility = "visible";
+}
+function  hard() {
+    MINNUM = 1;
+    MAXNUM = 100;
+    document.getElementById("difficulty3").style.backgroundColor = "gray";
+    document.getElementById("difficulty3").style.color = "white";
+    document.getElementById("startGame").style.visibility = "visible";
+}
+
+
 function loadGame() {
     guess.max = MAXNUM;
     guess.min = MINNUM;
 
-    document.body.style.backgroundColor = `rgb(99, 46, 10)`
+    document.getElementById("yourGuess").style.visibility = "visible";
+    document.getElementById("guess").style.visibility = "visible";
+    document.getElementById("report").style.visibility = "visible";
+    document.getElementById("makeGuess").style.visibility = "visible";
+
+    document.body.style.backgroundColor = "yellow";
+    document.body.style.color = "black";
     document.getElementById("reset").style.visibility = "hidden";
     secret = Math.random()
     let range = MAXNUM-MINNUM+1; //Calculate range of numbers
@@ -42,22 +74,27 @@ function makeGuess() {
             spread: 160
         })
         document.getElementById("reset").style.visibility = "visible";
+        document.body.style.color = "aliceblue";
     }
     else if (myGuess < secret){
         report.innerHTML += `<br>${myGuess} is too small`;
-        document.body.style.backgroundColor = "red";
+        document.body.style.backgroundColor = "darkred";
+        document.body.style.color = "aliceblue";
     }
     else if (myGuess > MAXNUM){
         report.innerHTML += `<br>${myGuess} is greater than the maximum`;
-        document.body.style.backgroundColor = "red";
+        document.body.style.backgroundColor = "darkred";
+        document.body.style.color = "aliceblue";
     }
     else if (myGuess < MINNUM){
         report.innerHTML += `<br>${myGuess} is less than the minimum`;
-        document.body.style.backgroundColor = "red";
+        document.body.style.backgroundColor = "darkred";
+        document.body.style.color = "aliceblue";
     }
     else {
         report.innerHTML += `<br>${myGuess} is too big`;
-        document.body.style.backgroundColor = "red";
+        document.body.style.backgroundColor = "darkred";
+        document.body.style.color = "aliceblue";
     }
 }
 

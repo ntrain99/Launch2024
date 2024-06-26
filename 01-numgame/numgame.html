@@ -8,13 +8,14 @@
     <link rel="stylesheet" href="numgame.css">
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
 </head>
-<body> <!-- do something onload -->
+<body > <!-- do something onload -->
     <h1>Number Guessing Game</h1>
-    <p>Set your maximum and minimum<br><label id = "maxmin">Maximum Guess </label>
-    <input id = "maximum" type = "number"> <button id = "set">Set</button><br> 
-    <label id = "maxmin">Minimum Guess </label>
-    <input id = "minimum"> <button id = "set2">Set</button></p>
-    <button onclick = "loadgame()" id = "startGame">Start Game</button><br>
+    <p>Set your minimum and maximum<br>
+        <label>Easy </label><button id = "difficulty1" onclick = "easy()">1-5</button><br>
+        <label>Medium </label><button id = "difficulty2" onclick = "medium()">1-50</button><br>
+        <label>Hard </label><button id = "difficulty3" onclick = "hard()">1-100</button><br>
+    <button id = "startGame" onclick = "loadGame()">Start Game</button>
+    </p>
     <label id = "yourGuess">Your Guess:</label>
     <input id = "guess" type = "number" min="1">
     <button id = "makeGuess" onclick = "makeGuess()">GUESS!</button>

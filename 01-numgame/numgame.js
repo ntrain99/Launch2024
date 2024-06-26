@@ -2,13 +2,12 @@ const guess = document.getElementById("guess");
 const report = document.getElementById("report");
 
 document.getElementById("reset").style.visibility = "hidden";
-document.getElementById("guess").style.visibility = "hidden";
-document.getElementById("report").style.visibility = "hidden";
-document.getElementById("yourGuess").style.visibility = "hidden";
-document.getElementById("makeGuess").style.visibility = "hidden";
 
-let MAXNUM = document.getElementById("maximum");
-let MINNUM = document.getElementById("minimum");
+const max = document.getElementById("maximum");
+const min = document.getElementById("minimum");
+
+let MAXNUM = max.value
+let MINNUM = min.value
 
 let secret;
 

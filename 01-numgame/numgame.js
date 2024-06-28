@@ -24,6 +24,10 @@ function  easy() {
     document.getElementById("difficulty1").style.backgroundColor = "gray";
     document.getElementById("difficulty1").style.color = "white";
     document.getElementById("startGame").style.visibility = "visible";
+    document.getElementById("difficulty2").style.backgroundColor = "white";
+    document.getElementById("difficulty2").style.color = "black";
+    document.getElementById("difficulty3").style.backgroundColor = "white";
+    document.getElementById("difficulty3").style.color = "black";
     
 }
 function  medium() {
@@ -32,6 +36,10 @@ function  medium() {
     document.getElementById("difficulty2").style.backgroundColor = "gray";
     document.getElementById("difficulty2").style.color = "white";
     document.getElementById("startGame").style.visibility = "visible";
+    document.getElementById("difficulty3").style.backgroundColor = "white";
+    document.getElementById("difficulty3").style.color = "black";
+    document.getElementById("difficulty1").style.backgroundColor = "white";
+    document.getElementById("difficulty1").style.color = "black";
 }
 function  hard() {
     MINNUM = 1;
@@ -39,6 +47,10 @@ function  hard() {
     document.getElementById("difficulty3").style.backgroundColor = "gray";
     document.getElementById("difficulty3").style.color = "white";
     document.getElementById("startGame").style.visibility = "visible";
+    document.getElementById("difficulty2").style.backgroundColor = "white";
+    document.getElementById("difficulty2").style.color = "black";
+    document.getElementById("difficulty1").style.backgroundColor = "white";
+    document.getElementById("difficulty1").style.color = "black";
 }
 
 

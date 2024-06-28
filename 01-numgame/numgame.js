@@ -6,11 +6,12 @@ document.getElementById("yourGuess").style.visibility = "hidden";
 document.getElementById("guess").style.visibility = "hidden";
 document.getElementById("report").style.visibility = "hidden";
 document.getElementById("makeGuess").style.visibility = "hidden";
-document.getElementById("startGame").style.visibility = "hidden";
+
 
 let MAXNUM;
 let MINNUM;
-
+let min = document.getElementById("min");
+let max = document.getElementById("max");
 let secret;
 
 var myConfetti = confetti.create(null, {
@@ -18,43 +19,14 @@ var myConfetti = confetti.create(null, {
     useWorker: true
 });
 
-function  easy() {
-    MINNUM = 1;
-    MAXNUM = 5;
-    document.getElementById("difficulty1").style.backgroundColor = "gray";
-    document.getElementById("difficulty1").style.color = "white";
-    document.getElementById("startGame").style.visibility = "visible";
-    document.getElementById("difficulty2").style.backgroundColor = "white";
-    document.getElementById("difficulty2").style.color = "black";
-    document.getElementById("difficulty3").style.backgroundColor = "white";
-    document.getElementById("difficulty3").style.color = "black";
-    
+function lockInput(){
+    document.getElementById("setM");
+    readOnly = true;
 }
-function  medium() {
-    MINNUM = 1;
-    MAXNUM = 50;
-    document.getElementById("difficulty2").style.backgroundColor = "gray";
-    document.getElementById("difficulty2").style.color = "white";
-    document.getElementById("startGame").style.visibility = "visible";
-    document.getElementById("difficulty3").style.backgroundColor = "white";
-    document.getElementById("difficulty3").style.color = "black";
-    document.getElementById("difficulty1").style.backgroundColor = "white";
-    document.getElementById("difficulty1").style.color = "black";
-}
-function  hard() {
-    MINNUM = 1;
-    MAXNUM = 100;
-    document.getElementById("difficulty3").style.backgroundColor = "gray";
-    document.getElementById("difficulty3").style.color = "white";
-    document.getElementById("startGame").style.visibility = "visible";
-    document.getElementById("difficulty2").style.backgroundColor = "white";
-    document.getElementById("difficulty2").style.color = "black";
-    document.getElementById("difficulty1").style.backgroundColor = "white";
-    document.getElementById("difficulty1").style.color = "black";
-}
-
 
 function loadGame() {
+    MINNUM = min.value;
+    MAXNUM = max.value;
     guess.max = MAXNUM;
     guess.min = MINNUM;
 

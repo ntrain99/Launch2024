@@ -11,9 +11,8 @@
 <body > <!-- do something onload -->
     <h1>Number Guessing Game</h1>
     <p>Set your minimum and maximum<br>
-        <label>Easy </label><button id = "difficulty1" onclick = "easy()">1-5</button><br>
-        <label>Medium </label><button id = "difficulty2" onclick = "medium()">1-50</button><br>
-        <label>Hard </label><button id = "difficulty3" onclick = "hard()">1-100</button><br>
+        <label>Minimum </label><input id = "min" type = "number"><button onclick = "lockInput()" id = "setM">Set</button><br>
+        <label>Maximum </label><input id = "max" type = "number"><button onclick = "lockInput()" id = "setM">Set</button><br>
     <button id = "startGame" onclick = "loadGame()">Start Game</button>
     </p>
     <label id = "yourGuess">Your Guess:</label>
